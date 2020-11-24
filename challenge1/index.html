@@ -9,14 +9,20 @@
             REFACTORY CHALLENGE JAVASCRIPT #1
         </header>
         <main>
-            <h3>Masukkan angka :</h3>
-            <input  />
-            <h3>Hasil :</h3>
-            <h2></h2>
+            <form id="formNilai" onsubmit="return false">
+                <h3>Masukkan Nilai :</h3>
+                <input type="text" id ="input1" />
+                <p>
+                    <button type="submit" onclick="grade()">Input Nilai</button>
+                </p>
+                <h3>Hasil :</h3>
+                <h2 id="container"> </h2>       
+            </form>
+
         </main>
         <footer>
-
+            @nawan44
         </footer>
-        <script src="./main.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>
