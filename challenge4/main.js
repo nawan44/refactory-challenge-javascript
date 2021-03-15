@@ -1,10 +1,10 @@
 function kabisat(){
-    var nilai1 = document.getElementById("formNilai").input1.value;
-    var nilai2 = document.getElementById("formNilai").input2.value;
-    var i;
-    var text = " ";
+    let nilai1 = document.getElementById("formNilai").input1.value;
+    let nilai2 = document.getElementById("formNilai").input2.value;
+    let i;
+    let text = " ";
     
-    var p_kontainer = document.getElementById("container");
+    let p_kontainer = document.getElementById("container");
    for(i = nilai1; i <= nilai2; i++){
        if(i%4 == 0){
            text += i + "<br />";
