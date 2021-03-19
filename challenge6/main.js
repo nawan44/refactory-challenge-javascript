@@ -1,33 +1,46 @@
-function birthday() {
+function ulangTahun() {
+  //Ambil tanggal ulang tahun dari inputan tanggal
+  let birthday = new Date(document.getElementById("formNilai").input1.value);
+  //set tahun = 0
+  let year = 0;
 
-    let birth = new Date(document.getElementById("formNilai").input1.value)
+  //set tanggal hari ini (saat melakukan meghitung umur)
+  let hariini = new Date();
+  //Menghitung tahun jika ulang tahun belum lewat
+  if (hariini.getMonth() < birthday.getMonth()) {
+    year = 1;
+  } else if (
+    hariini.getMonth() == birthday.getMonth() &&
+    hariini.getDate() < birthday.getDate()
+  ) {
+    year = 1;
+  }
+  //Menghitung mengurangi hitungan tahun karena ulang tahun belum berlalu
+  let umur = hariini.getFullYear() - birthday.getFullYear() - year;
+  if (umur < 0) {
+    umur = 0;
+  }
 
-    let today = new Date();
+  //MENGHITUNG HARI
+  //Satu hari dalam milisecond
+  let satu_hari = 1000 * 60 * 60 * 24;
+  // 0 -11 adalah bulan dalam Javascript
+  let ulang_tahun_tahunan = new Date(
+    hariini.getFullYear(),
+    birthday.getMonth(),
+    birthday.getDate()
+  );
+  if (
+    hariini.getMonth() == birthday.getMonth() &&
+    hariini.getDate() < birthday.getDate()
+  )
+    ulang_tahun_tahunan.setFullYear(ulang_tahun_tahunan.getFullYear() + 1);
 
-    // let birth = new Date("03/05/2016")
+  let hari =
+    Math.round(ulang_tahun_tahunan.getTime() - hariini.getTime()) / satu_hari;
+  // Menghilangkan desimal dari hasil
+  let hari_benar = Math.abs(hari.toFixed(0));
 
-    // let today = new Date("06/05/2020");
-
-
-    let umur = Math.abs(today - birth)
-    console.log(umur)
-    let satuHari = 1000 * 60 * 60 * 24;
-    let satuBulan = 1000 * 60 * 60 * 24 * 30;
-    let satuTahun = 1000 * 60 * 60 * 24 * 365;
-
-    let selisihTahun = Math.floor(umur / satuTahun);
-
-    let selisihBulan = Math.floor((umur - (selisihTahun * satuTahun)) / satuBulan);
-
-    let selisihHari = Math.floor((umur - (selisihTahun * satuTahun) - (selisihBulan * satuBulan)) / satuHari);
-    let jumlahHari = selisihBulan * 30 + selisihHari
-
-    // let hasil = selisihTahun + " Tahun " + selisihBulan + " Bulan " + selisihHari + " Hari";
-    let hasil = selisihTahun + " Tahun " + jumlahHari + " Hari";
-
-
-    document.getElementById("container").innerHTML = hasil;
-
-
+  document.getElementById("container").innerHTML =
+    umur + "  tahun " + hari_benar + " hari";
 }
-
