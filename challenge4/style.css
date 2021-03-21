@@ -1,5 +1,4 @@
 body {
-    background-color: grey;
     margin: 0;
     padding: 0;
 }
@@ -13,17 +12,23 @@ header {
 }
 
 form {
+    background-color: grey;
     width: 100%;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 button {
+    padding: 5px 0;
+    width: 100%;
     background-color: green;
+    font-size: 20px;
 }
 
 main {
     width: 100%;
-    height: 300px;
+    height: 700px;
+    padding: 0 0 30px 0;
+    background-color: antiquewhite;
 }
 
 footer {
@@ -37,4 +42,12 @@ footer {
 
 h2 {
     background-color: yellow;
+}
+.title{
+    text-align: center;
+    background-color: transparent;
+}
+.input{
+    width: 100%;
+    padding: 5px 0 ;
 }

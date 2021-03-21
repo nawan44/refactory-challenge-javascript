@@ -27,7 +27,7 @@ main {
 }
 
 footer {
-    position: fixed;
+    position:relative;
     width: 100%;
     text-align: center;
     background-color: beige;
