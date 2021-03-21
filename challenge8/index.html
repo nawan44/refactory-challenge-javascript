@@ -8,17 +8,19 @@
 
 <body>
     <header>
-        REFACTORY CHALLENGE JAVASCRIPT #8 - Buble Sort
+        REFACTORY CHALLENGE JAVASCRIPT #8 - Buble Sort (Descending)
     </header>
     <main>
         <form id="formNilai" onsubmit="return false">
-            <h3>Masukkan Kalimat:</h3>
+            <h3>Masukkan Data:</h3>
             <input type="text" id="input" name="name[]" />
             <p>
-                <button type="submit" onclick="buble()">Ubah urutan kata</button>
+                <button type="submit"  onclick="bubleSort()">Ubah urutan kata</button>
             </p>
+            <h3>Data yang dimasukkan :</h3>
+            <h2 id="data"> </h2>
             <h3>Hasil :</h3>
-            <h2 id="container"> </h2>
+            <h2 id="result"> </h2>
         </form>
 
     </main>

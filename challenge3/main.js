@@ -1,42 +1,62 @@
-const numbers = [
-    -6,
-    -4,
-    0,
-    1,
-    2,
-    2,
-    3,
-    10,
-    12,
-    44,
-    52,
-    72,
-    98
-];
+function dataSort() {
+  let numbers = document.getElementById("input").value;
 
-//Max
-const max = Math
-    .max
-    .apply(Math, numbers);
+  function swap(arr, first, second) {
+    let temp = arr[first];
+    arr[first] = arr[second];
+    arr[second] = temp;
+  }
+  //Data Sort
+  let arr;
+  if (numbers.length === 0) {
+    arr = new Array();
+  } 
+  
+  else {
+    arr = numbers.match(/\d+/g).map(Number);
+  }
+  let len = arr.length,
+    i,
+    j,
+    stop;
+  for (i = 0; i < len; i++) {
+    for (j = 0, stop = len - i; j < stop; j++) {
+      if (arr[j] > arr[j + 1]) {
+        swap(arr, j, j + 1);
+      }
+    }
+  }
 
-//Min
-const min = Math
-    .min
-    .apply(Math, numbers);
+  //Max
+  const max = Math.max.apply(Math, arr);
 
-// Median 
-const mid = Math.floor(numbers.length / 2);
-const arraysSort = [...numbers].sort((a,b) => a - b);
-const median = 
-    numbers % 2 !== 0 ? arraysSort[mid] : (arraysSort[mid - 1] + arraysSort[mid]) / 2;
+  //Min
+  const min = Math.min.apply(Math, arr);
 
-//Average
-const sum = numbers.reduce((sum, val) => (sum += val));
-const len = numbers.length;
-const average = sum / len
+  // Median
+  const mid = Math.floor(arr.length / 2);
+  const arraysSort = [...arr].sort((a, b) => a - b);
+  const median =
+    arr % 2 !== 0
+      ? arraysSort[mid]
+      : (arraysSort[mid - 1] + arraysSort[mid]) / 2;
 
-document.write("Dari angka - angka ini : " + numbers + "<br />");
-document.write("Max     : " + max + "<br />");
-document.write("Min     : " + min + "<br />");
-document.write("Median  : " + median + "<br />");
-document.write("Average : " + average + "<br />");
+  //Average
+  const sum = arr.reduce((sum, val) => (sum += val));
+  const lan = arr.length;
+  const average = sum / lan;
+
+  //Data Rounding
+  const rounding = Math.round(average)
+
+
+  document.getElementById("data").innerHTML = numbers;
+  document.getElementById("data_sort").innerHTML = arr;
+
+  document.getElementById("result_max").innerHTML = max;
+  document.getElementById("result_min").innerHTML = min;
+  document.getElementById("result_median").innerHTML = median;
+  document.getElementById("result_average").innerHTML = average;
+  document.getElementById("result_rounding").innerHTML = rounding;
+
+}
