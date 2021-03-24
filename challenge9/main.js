@@ -1,38 +1,47 @@
-let items = [];
+function swap(arr, first, second) {
+  let temp = arr[first];
+  arr[first] = arr[second];
+  arr[second] = temp;
+}
 function arrayInPairs() {
+  //Data Input
   let numbers = document.getElementById("input").value;
-
-
+  //Data Array
 let jbb = numbers.split(" ").map(Number)
-// console.log("fruitsString", jbb)
-// console.log(typeof jbb);
-// console.log(Array.isArray(jbb));
 const arrs = '[' + jbb.join(", ") + ']';
-// console.log("fruitsString", arrs)
-// console.log(typeof arrs);
-// console.log(Array.isArray(arrs));
 
-  
-
-  let arraySort = [...numbers].sort((a, b) => a - b);
+  //SORT DATA
   let totalArrays = [];
-  console.log(arraySort);
-
-  for (let i = 0; i < arraySort.length; i += 2) {
-    let sliceArray = i + 2;
-    totalArrays.push(arraySort.slice(i, sliceArray));
+  let arr;
+  if (numbers.length === 0) {
+    arr = new Array();
+  } 
+  else {
+    arr = numbers.match(/\d+/g).map(Number);
   }
-  console.log(totalArrays.join(", "));
+  let len = arr.length,
+    i,
+    j,
+    stop;
+  for (i = 0; i < len; i++) {
+    for (j = 0, stop = len - i; j < stop; j++) {
+      if (arr[j] > arr[j + 1]) {
+        swap(arr, j, j + 1);
+      }
+    }
+  }
+  let zzz = arr.toString().split(',').join(" ")
+  let kbb = zzz.split(" ").map(Number)
+  let arrt = '[' + kbb.join(", ") + ']';
 
-  // let A = totalArrays.map(Number)
-  let B = '[' +totalArrays + ']';
 
-
-// console.log(A); 
-  
-  
+//ARRAY in Pairs
+  for (let i = 0; i < arr.length; i += 2) {
+    let sliceArray = i + 2;
+    totalArrays.push(arr.slice(i, sliceArray));
+  }
   document.getElementById("data").innerHTML = numbers;
   document.getElementById("array").innerHTML = arrs;
-
-  document.getElementById("result").innerHTML = B;
+  document.getElementById("sort").innerHTML = arrt;
+  document.getElementById("result").innerHTML = JSON.stringify(totalArrays)
 }
