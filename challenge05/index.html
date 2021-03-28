@@ -12,15 +12,19 @@
     </header>
     <main>
         <form id="formNilai" onsubmit="return false">
-            <h3>Masukkan Kata / Kalimat :</h3>
-            <input type="text" id="input1" />
+            <fieldset>
+                <legend>
+                  <h3 class="title">DATA PROCESSING</h3>
+                </legend>
+                <h3>Input Words / Sentences:</h3>
+            <input type="text" id="input" />
             <p>
 
                 <button type="submit" onclick="palindrom()">Ubah Palindrom</button>
             </p>
-            <h3>Nilai yang dimasukkan convert lower case :</h3>
+            <h3>Value convert to lower case :</h3>
             <h2 id="container1"> </h2>
-            <h3>Hasil :</h3>
+            <h3>Result :</h3>
             <h2 id="container2"> </h2>
         </form>
 

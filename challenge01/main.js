@@ -1,5 +1,5 @@
 function grade(){
-    let nilai = document.getElementById("formNilai").input1.value;
+    let nilai = document.getElementById("formNilai").input.value;
     let p_kontainer = document.getElementById("container");
     if( nilai >= 90 ){
         p_kontainer.innerHTML = "A";

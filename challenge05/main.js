@@ -1,5 +1,5 @@
 function palindrom() {
-  let nilai1 = document.getElementById("formNilai").input1.value;
+  let nilai1 = document.getElementById("formNilai").input.value;
   let nilai2 = nilai1.toLowerCase();
   let nilai3 = (document.getElementById("container1").innerHTML = nilai2);
   nilai2.innerHTML = nilai3;

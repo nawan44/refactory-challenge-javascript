@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Refactory Challenge JS#07</title>
     <link rel="stylesheet" href="style.css" />
-</head>
+  </head>
 
-<body>
-    <header>
-        REFACTORY CHALLENGE JAVASCRIPT #07
-    </header>
+  <body>
+    <header>REFACTORY CHALLENGE JAVASCRIPT #07</header>
     <main>
-        <form id="formNilai" onsubmit="return false">
-            <h3>Masukkan Kalimat:</h3>
-            <input type="text" id="input1" name="name[]" />
-            <p>
-                <button type="submit" onclick="reverseText()">Ubah urutan kata</button>
-            </p>
-            <h3>Hasil :</h3>
-            <h2 id="container"> </h2>
-        </form>
-
+      <form id="formNilai" onsubmit="return false">
+        <fieldset>
+          <legend>
+            <h2 class="title">DATA PROCESSING</h2>
+          </legend>
+          <h3>INPUT DATA:</h3>
+          <input type="text" id="input" name="name[]" />
+          <p>
+            <button type="submit" onclick="reverseText()">
+              Ubah urutan kata
+            </button>
+          </p>
+          <h3>Hasil :</h3>
+          <h2 id="container"></h2>
+        </fieldset>
+      </form>
     </main>
-    <footer>
-        @nawan44
-    </footer>
+    <footer>@nawan44</footer>
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>

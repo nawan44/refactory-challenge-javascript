@@ -8,21 +8,28 @@ header {
     margin: 0 auto;
     width: 100%;
     text-align: center;
-    padding: 10px;
+    padding: 10px 0;
 }
 
 form {
     background-color: grey;
     width: 100%;
     padding: 20px 0;
+    text-align: center;
+    margin: 0 auto;
 }
-
 button {
     padding: 5px 0;
-    width: 100%;
+    width: 90%;
     background-color: green;
+    font-size: 16px;
+    border: none;
+  }
+  button:hover {
+    width: 100%;
+    background-color: aqua;
     font-size: 20px;
-}
+  }
 
 main {
     width: 100%;
@@ -32,7 +39,7 @@ main {
 }
 
 footer {
-    position: fixed;
+    position: relative;
     width: 100%;
     text-align: center;
     background-color: beige;

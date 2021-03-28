@@ -1,6 +1,6 @@
 function reverseText() {
     const a = document
-        .getElementById("input1")
+        .getElementById("input")
         .value;
     const b = a
         .split(' ')

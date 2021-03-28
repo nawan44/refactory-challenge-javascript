@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Refactory Challenge JS#06</title>
     <link rel="stylesheet" href="style.css" />
-</head>
+  </head>
 
-<body>
-    <header>
-        REFACTORY CHALLENGE JAVASCRIPT #06
-    </header>
+  <body>
+    <header>REFACTORY CHALLENGE JAVASCRIPT #06</header>
     <main>
-        <form id="formNilai" onsubmit="return false">
-            <h3>Masukkan Tanggal Lahir :</h3>
-            <input type="date" id="input1" />
-            <p>
-                <button type="submit" onclick="ulangTahun()">Cek Umur</button>
-            </p>
-            <h3>Hasil :</h3>
-            <h2 id="container"> </h2>
-        </form>
-
+      <form id="formNilai" onsubmit="return false">
+        <fieldset>
+          <legend>
+            <h3 class="title">DATA PROCESSING</h3>
+          </legend>
+          <h3>INPUT DATE:</h3>
+          <input type="date" id="input" />
+          <p>
+            <button type="submit" onclick="ulangTahun()">Cek Umur</button>
+          </p>
+          <h3>Hasil :</h3>
+          <h2 id="container"></h2>
+        </fieldset>
+      </form>
     </main>
-    <footer>
-        @nawan44
-    </footer>
+    <footer>@nawan44</footer>
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>
