@@ -1,12 +1,12 @@
 
 function grade(){
-    let nilai = document.getElementById("formNilai").input.value;
-    let p_kontainer = document.getElementById("container");
-    if( nilai % 2 == 0   ){
-        p_kontainer.innerHTML = "Genap";
+    let valueData = document.getElementById("formvalueData").input.value;
+    let p_container = document.getElementById("container");
+    if( valueData % 2 == 0   ){
+        p_container.innerHTML = "Genap";
     } 
-    else if (nilai % 2 != 0) {
-        p_kontainer.innerHTML = "Ganjil";
+    else if (valueData % 2 != 0) {
+        p_container.innerHTML = "Ganjil";
     }
 
 }

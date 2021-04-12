@@ -1,6 +1,6 @@
-function ulangTahun() {
+function BirthDay() {
   //Ambil tanggal ulang tahun dari inputan tanggal
-  let birthday = new Date(document.getElementById("formNilai").input.value);
+  let birthday = new Date(document.getElementById("formValue").input.value);
   //set tahun = 0
   let year = 0;
 

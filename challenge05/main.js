@@ -1,17 +1,17 @@
 function palindrom() {
-  let nilai1 = document.getElementById("formNilai").input.value;
-  let nilai2 = nilai1.toLowerCase();
-  let nilai3 = (document.getElementById("container1").innerHTML = nilai2);
-  nilai2.innerHTML = nilai3;
-  console.log(nilai3);
+  let valueData1 = document.getElementById("formvalueData").input.value;
+  let valueData2 = valueData1.toLowerCase();
+  let valueData3 = (document.getElementById("container1").innerHTML = valueData2);
+  valueData2.innerHTML = valueData3;
+  console.log(valueData3);
 
-  let nilai4 = nilai3.split("").reverse().join("");
+  let valueData4 = valueData3.split("").reverse().join("");
 
-  let p_kontainer2 = document.getElementById("container2");
+  let p_container2 = document.getElementById("container2");
 
-  if (nilai3 === nilai4) {
-    p_kontainer2.innerHTML = "palindrom";
+  if (valueData3 === valueData4) {
+    p_container2.innerHTML = "palindrom";
   } else {
-    p_kontainer2.innerHTML = " Bukan palindrom";
+    p_container2.innerHTML = " Bukan palindrom";
   }
 }

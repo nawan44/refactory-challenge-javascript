@@ -1,11 +1,11 @@
-function kabisat(){
-    let nilai1 = document.getElementById("formNilai").input1.value;
-    let nilai2 = document.getElementById("formNilai").input2.value;
+function leap(){
+    let valueData1 = document.getElementById("formValueData").input1.value;
+    let valueData2 = document.getElementById("formValueData").input2.value;
     let i;
     let text = " ";
     
-    let p_kontainer = document.getElementById("container");
-   for(i = nilai1; i <= nilai2; i++){
+    let p_container = document.getElementById("container");
+   for(i = valueData1; i <= valueData2; i++){
        if(i%4 == 0){
            text += i + "<br />";
        }
