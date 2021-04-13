@@ -12,6 +12,6 @@ function palindrom() {
   if (valueData3 === valueData4) {
     p_container2.innerHTML = "palindrom";
   } else {
-    p_container2.innerHTML = " Bukan palindrom";
+    p_container2.innerHTML = " Not palindrom";
   }
 }
